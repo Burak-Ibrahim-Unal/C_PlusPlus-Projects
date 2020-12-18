@@ -1,0 +1,4 @@
+﻿  Source.cpp
+c:\users\burak\documents\visual studio 2015\projects\c++\clientudp\clientudp\source.cpp(99): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  ClientUDP.vcxproj -> C:\Users\Burak\Documents\Visual Studio 2015\Projects\C++\ClientUDP\x64\Debug\ClientUDP.exe
+  ClientUDP.vcxproj -> C:\Users\Burak\Documents\Visual Studio 2015\Projects\C++\ClientUDP\x64\Debug\ClientUDP.pdb (Full PDB)
