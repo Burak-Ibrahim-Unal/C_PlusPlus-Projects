@@ -4,7 +4,6 @@ using namespace std;
 class Covid
 {
 public:
-     void setBirthYear(int y);
      int getBirthYear(void);
 
      Covid(); // This is the constructor
@@ -14,7 +13,7 @@ private:
      int birthYear;
 };
 
-// Member functions definitions including constructor
+// Member functions definitions including constructor and desconstructor
 
 Covid::Covid()
 {
