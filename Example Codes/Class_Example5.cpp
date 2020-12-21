@@ -55,7 +55,7 @@ int main()
      Covid covid2 = covid;
 
      display(covid);
-     display(covid2);
+     display(covid2); //copy constructor
 
      return 0;
 }
