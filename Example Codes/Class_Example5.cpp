@@ -1,46 +1,53 @@
 #include <iostream>
 
 using namespace std;
-class Covid
-{
-public:
-     int getBirthYear(void);
 
-     Covid(); // This is the constructor
-     ~Covid();
+class Covid {
 
-private:
-     int birthYear;
+   public:
+      int getYear( void );
+      Covid( int year );             // simple constructor
+      Covid( const Covid &obj);      // copy constructor
+      ~Covid();                      // destructor
+ 
+   private:
+      int *p;
 };
 
-// Member functions definitions including constructor and desconstructor
-
-Covid::Covid()
-{
-     cout << "Object created" << endl;
+// Member functions definitions including constructor
+Covid::Covid(int year) {
+   cout << "Normal constructor allocating p" << endl;
+   
+   // allocate memory for the pointer;
+   p = new int;
+   *p = year;
 }
 
-Covid::~Covid()
-{
-     cout << "Object deleted" << endl;
+Covid::Covid(const Covid &obj) {
+   cout << "Copy constructor allocating p." << endl;
+   p = new int;
+   *p = *obj.p; // copy the value
 }
 
-void Covid::setBirthYear(int y)
-{
-     birthYear = y;
+Covid::~Covid(void) {
+   cout << "Freeing memory!" << endl;
+   delete p;
 }
-int Covid::getBirthYear(void)
-{
-     return birthYear;
+
+int Covid::getYear( void ) {
+   return *p;
+}
+
+void display(Covid obj) {
+   cout << "year of Covid : " << obj.getYear() <<endl;
 }
 
 // Main function for the program
-int main()
-{
-     Covid Covid;
-     // set Covid birthYear again
-     Covid.setBirthYear(2020);
-     cout << "birthYear of Covid : " << Covid.getBirthYear() << endl;
+int main() {
+   Covid Covid(10);
 
-     return 0;
+   display(Covid);
+
+   return 0;
 }
+
